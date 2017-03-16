@@ -14,8 +14,7 @@ public class Utility {
 	
 	public static void captureScreenshot(WebDriver driver, String screenshotName)	
 	{
-		
-		
+				
 		try {
 			TakesScreenshot ts=(TakesScreenshot)driver;
 			
@@ -27,8 +26,10 @@ public class Utility {
 		} 
 		catch (Exception e) 
 		{
-			System.out.println("Exception while taking screenshot" + e.getMessage());
+			System.out.println(screenshotName + ": Screenshot NOT taken: Reason: " + e.getMessage());
 	}
-
+		/* finally 
+		{
+		} */
 }
 }
